@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gremmer.Data.Entities.Settings
+namespace Server.Data.Entities.Settings
 {
     public class LoginSettings
     {

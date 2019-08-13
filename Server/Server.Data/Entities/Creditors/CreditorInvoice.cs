@@ -1,4 +1,4 @@
-﻿namespace Gremmer.Data.Entities.Creditors
+﻿namespace Server.Data.Entities.Creditors
 {
     public class CreditorInvoice
     {

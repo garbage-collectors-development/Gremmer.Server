@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Server.Data.Entities.Creditors
+namespace Server.Data.Entities.Posting
 {
-    public class Creditor
+    public class BalanceSheetCategory
     {
+
     }
 }

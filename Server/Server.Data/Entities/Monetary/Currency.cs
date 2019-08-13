@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gremmer.Data.Entities.Common
+namespace Server.Data.Entities.Monetary
 {
     // Should this be in the database, or should we hardcode those currencies with all this information? 
     public class Currency

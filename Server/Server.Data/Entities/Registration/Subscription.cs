@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gremmer.Data.Entities.Registration
+namespace Server.Data.Entities.Registration
 {
     public class Subscription
     {

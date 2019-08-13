@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gremmer.Data.Entities.Settings
+namespace Server.Data.Entities.Settings
 {
     public class MonetarySettings
     {
@@ -14,7 +14,7 @@ namespace Gremmer.Data.Entities.Settings
         /// <summary>
         /// 
         /// </summary>
-        public int MainCurrency { get; set; }
+        public int MainCurrencyId { get; set; }
 
         /// <summary>
         /// All VAT values relevant for the company. The first index is the default choice. 
