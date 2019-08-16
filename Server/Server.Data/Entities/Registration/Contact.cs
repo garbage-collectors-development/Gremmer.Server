@@ -5,36 +5,44 @@ using System.Text;
 
 namespace Server.Data.Entities.Registration
 {
-    public class User
+    /// <summary>
+    /// A business contact of a customer.
+    /// </summary>
+    public class Contact
     {
-        /// <summary>
-        ///  
-        /// </summary>
-        [Key] public int Id { get; set; }
-        
         /// <summary>
         /// 
         /// </summary>
-        public int CompanyId { get; set; }
+        [Key] public int Id { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public string Nickname { get; set; }
-        
+        public string FirstName { get; set; }
+
         /// <summary>
-        /// Username of user which may not contain a '@'. 
+        /// 
         /// </summary>
-        public string Username { get; set; }
-        
+        public string MiddleName { get; set; }
+
         /// <summary>
-        /// E-Mail address of user used to login
+        /// 
+        /// </summary>
+        public string LastName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public string Email { get; set; }
         
         /// <summary>
-        /// Hashed pass phrase of the customer.
+        /// 
         /// </summary>
-        public string HashedPassPhrase { get; set; }
+        public int Address { get; set; }
     }
 }

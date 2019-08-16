@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Gremmer.Data.Entities.Registration
+namespace Server.Data.Entities.Registration
 {
     public class Subscription
     {
         /// <summary>
-        /// Unique ID of subscription.
+        /// GUID of subscription.
         /// </summary>
-        public int Id { get; set; }
+        [Key] public Guid Id { get; set; }
 
         /// <summary>
         /// Corresponding customer's id. 
@@ -17,30 +18,19 @@ namespace Gremmer.Data.Entities.Registration
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Type of the subscription. 
+        /// Reference to the ID of the subscriptiontype. 
         /// </summary>
-        public SubscriptionTypes SubScripsSubscriptionType { get; set; }
+        public int SubscriptionType { get; set; }
 
         /// <summary>
-        /// Corresponding DateTime of start of the subscription 
+        /// Corresponding DateTime of start of the subscription. 
         /// </summary>
         public DateTime StartDate { get; set; }
 
         /// <summary>
-        /// Returns the duration of the subscriptions in days.
+        /// Corresponding DateTime of end of the subscription.
         /// </summary>
-        public uint Duration { get; set; }
-
-        // Do we want this to be hardcoded?? Also, this must be placed in another file but CBA. 
-        /// <summary>
-        /// All types of subscriptions.
-        /// </summary>
-        public enum SubscriptionTypes
-        {
-            Free,
-            Trial,
-            Premium
-        }
-
+        public DateTime EndDate { get; set; }
+        
     }
 }

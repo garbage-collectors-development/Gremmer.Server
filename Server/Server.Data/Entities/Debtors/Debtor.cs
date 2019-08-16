@@ -1,42 +1,35 @@
-﻿namespace Gremmer.Data.Entities.Debtors
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace Server.Data.Entities.Debtors
 {
     public class Debtor
     {
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
 
+        public int DebtorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string Email { get; set; }
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Address { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public string Address2 { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string City { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string PostalCode { get; set; }
-
-        /// <summary>
-        /// Country ID
-        /// </summary>
-        public int CountryId { get; set; }
+        public int? Address { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         public string PhoneNumber { get; set; }
+
+        public List<int> Contacts { get; set; }
 
         /// <summary>
         /// Company Registry Number, such as KVK (Netherlands)

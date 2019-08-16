@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Gremmer.Data.Entities.Registration
+namespace Server.Data.Entities.Registration
 {
     /// <summary>
     /// A customer can have multiple companies linked to its profile.
     /// </summary>
-    public class Company
+    public class BusinessUnit
     {
         /// <summary>
         /// Unique ID of company.
         /// </summary>
-        public int Id { get; set;  }
+        [Key] public int Id { get; set;  }
 
         /// <summary>
         /// Name of the company.
@@ -40,13 +41,14 @@ namespace Gremmer.Data.Entities.Registration
         public string PostalCode { get; set; }
 
         /// <summary>
-        /// 
+        /// Companies default phonenumber.
         /// </summary>
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// Customer's main E-Mail address.
+        /// Companies default E-Mail address.
         /// </summary>
         public string Email { get; set; }
+
     }
 }

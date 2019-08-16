@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace Gremmer.Data.Entities.Debtors
+namespace Server.Data.Entities.Debtors
 {
     public class Reminder
     {
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
+
+        /// <summary>
+        /// Id of corresponding creditor.
+        /// </summary>
+        public int CreditorId { get; set; }
 
         /// <summary>
         /// This list contains all ID's of the invoices being reminded.

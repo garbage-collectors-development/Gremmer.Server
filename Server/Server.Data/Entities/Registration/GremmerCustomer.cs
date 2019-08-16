@@ -3,50 +3,25 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Gremmer.Data.Entities.Registration
+namespace Server.Data.Entities.Registration
 {
     /// <summary>
-    /// The Customer is the 
+    /// The Customer is the customer of Gremmer.
     /// </summary>
-    public class Customer
+    public class GremmerCustomer
     {
         /// <summary>
         /// Unique ID of OUR customer, main recovery account.
         /// </summary>
-        [Key()] public int Id { get; set; }
+        [Key] public int Id { get; set; }
 
         /// <summary>
-        /// Corresponding Email address, also login.
+        /// Main email address to which reminders are being sent.
         /// </summary>
         public string Email { get; set; }
         
         /// <summary>
-        /// 
-        /// </summary>
-        public string Address { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Address2 { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string City { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string PostalCode { get; set; }
-
-        /// <summary>
-        /// Country ID
-        /// </summary>
-        public int CountryId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Main phonenumber which is directly displayed in the debtors view.
         /// </summary>
         public string PhoneNumber { get; set; }
 
@@ -59,5 +34,10 @@ namespace Gremmer.Data.Entities.Registration
         /// Company's Taxpayer Identification Number (TIN) which is used for tax purposes. 
         /// </summary>
         public string TaxpayerIdentificationNumber { get; set; }
+
+        /// <summary>
+        /// List of references to the Contact ID's. 
+        /// </summary>
+        public List<int> Contacts { get; set; }
     }
 }
