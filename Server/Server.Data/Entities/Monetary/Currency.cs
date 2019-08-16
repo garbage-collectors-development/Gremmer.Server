@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Server.Data.Entities.Monetary
@@ -7,7 +8,7 @@ namespace Server.Data.Entities.Monetary
     // Should this be in the database, or should we hardcode those currencies with all this information? 
     public class Currency
     {
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
 
         /// <summary>
         /// The actual name of the currency, such as Euro.

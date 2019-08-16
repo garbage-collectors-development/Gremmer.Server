@@ -17,17 +17,17 @@ namespace Server.Data
 
         #region Debtors
         public virtual DbSet<Debtor> Debtors { get; set; }
-        public virtual DbSet<DebtorInvoice> DebtorInvoices { get; set; }
+        public virtual DbSet<SalesInvoice> SalesInvoices { get; set; }
         public virtual DbSet<Reminder> Reminders { get; set; }
         #endregion
 
         #region Creditors
         public virtual DbSet<Creditor> Creditors { get; set; }
-        public virtual DbSet<CreditorInvoice> CreditorInvoices { get; set; }
+        public virtual DbSet<PurchaseInvoice> PurchaseInvoices { get; set; }
         #endregion
 
         #region Registration
-        public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<BusinessUnit> BusinessUnits { get; set; }
         public virtual DbSet<User> User { get; set; }
         #endregion
 

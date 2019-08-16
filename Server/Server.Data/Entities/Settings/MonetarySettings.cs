@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Server.Data.Entities.Settings
@@ -9,7 +10,7 @@ namespace Server.Data.Entities.Settings
         /// <summary>
         /// 
         /// </summary>
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
 
         /// <summary>
         /// 
@@ -21,6 +22,5 @@ namespace Server.Data.Entities.Settings
         /// </summary>
         public IList<uint> VatList { get; set; }
 
-        
     }
 }

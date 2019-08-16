@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Server.Data.Entities.Debtors
 {
     public class Reminder
     {
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
 
         /// <summary>
         /// Id of corresponding creditor.

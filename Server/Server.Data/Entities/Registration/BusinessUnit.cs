@@ -6,25 +6,25 @@ using System.Text;
 namespace Server.Data.Entities.Registration
 {
     /// <summary>
-    /// The Customer is the 
+    /// A customer can have multiple companies linked to its profile.
     /// </summary>
-    public class Customer
+    public class BusinessUnit
     {
         /// <summary>
-        /// Unique ID of OUR customer, main recovery account.
+        /// Unique ID of company.
         /// </summary>
-        [Key()] public int Id { get; set; }
+        [Key] public int Id { get; set;  }
 
         /// <summary>
-        /// Corresponding Email address, also login.
+        /// Name of the company.
         /// </summary>
-        public string Email { get; set; }
+        public string Name { get; set;  }
         
         /// <summary>
         /// 
         /// </summary>
         public string Address { get; set; }
-
+        
         /// <summary>
         /// 
         /// </summary>
@@ -41,23 +41,14 @@ namespace Server.Data.Entities.Registration
         public string PostalCode { get; set; }
 
         /// <summary>
-        /// Country ID
-        /// </summary>
-        public int CountryId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Companies default phonenumber.
         /// </summary>
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// Company Registry Number, such as KVK (Netherlands)
+        /// Companies default E-Mail address.
         /// </summary>
-        public string RegistryNumber { get; set; }
+        public string Email { get; set; }
 
-        /// <summary>
-        /// Company's Taxpayer Identification Number (TIN) which is used for tax purposes. 
-        /// </summary>
-        public string TaxpayerIdentificationNumber { get; set; }
     }
 }

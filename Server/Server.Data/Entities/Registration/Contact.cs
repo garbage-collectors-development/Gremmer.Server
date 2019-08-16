@@ -1,43 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Server.Data.Entities.Registration
 {
     /// <summary>
-    /// A customer can have multiple companies linked to its profile.
+    /// A business contact of a customer.
     /// </summary>
-    public class Company
+    public class Contact
     {
         /// <summary>
-        /// Unique ID of company.
-        /// </summary>
-        public int Id { get; set;  }
-
-        /// <summary>
-        /// Name of the company.
-        /// </summary>
-        public string Name { get; set;  }
-        
-        /// <summary>
         /// 
         /// </summary>
-        public string Address { get; set; }
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Address2 { get; set; }
+        [Key] public int Id { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public string City { get; set; }
+        public string FirstName { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public string PostalCode { get; set; }
+        public string MiddleName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string LastName { get; set; }
 
         /// <summary>
         /// 
@@ -45,8 +36,13 @@ namespace Server.Data.Entities.Registration
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// Customer's main E-Mail address.
+        /// 
         /// </summary>
         public string Email { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Address { get; set; }
     }
 }

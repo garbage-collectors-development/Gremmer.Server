@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Server.Data.Entities.Posting
+namespace Server.Data.Entities.Settings
 {
-    public class BalanceSheetCategory
+    public class GremmmerCustomerSettings
     {
 
     }
